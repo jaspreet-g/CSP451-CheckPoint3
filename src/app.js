@@ -8,11 +8,7 @@ app.get("/", (req, res) => {
 });
 
 // Health endpoint
-app.get("/health", (req, res) => {
-  res.status(200).json({
-    status: "healthy",
-    uptime: process.uptime(),
-  });
+app.get("/health",(req,res)=>{res.status(200).json({status:"healthy",uptime:process.uptime()});});
 });
 
 module.exports = app;
